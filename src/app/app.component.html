@@ -10,16 +10,4 @@
   </div>
 </div>
 
-{{ (item | async)?.name }}
-
-<ul>
-  <li *ngFor="let item of items | async">
-    {{ item.name }}
-  </li>
-</ul>
-
-<form (submit)="handleSubmit($event)">
-  <label for="name">Name: </label>
-  <input id="name" name="name" ng-model="name" />
-  <button type="submit">Submit</button>
-</form>
+<router-outlet></router-outlet>

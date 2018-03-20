@@ -1,0 +1,27 @@
+<div *ngIf="auth.user | async; else guest">
+
+  {{ (item | async)?.name }}
+
+  <ul>
+    <li *ngFor="let item of items | async">
+      {{ item.name }}
+    </li>
+  </ul>
+
+  <form (submit)="handleSubmit($event)">
+    <label for="name">Name: </label>
+    <input id="name" name="name" ng-model="name" />
+    <button type="submit">Submit</button>
+  </form>
+
+</div>
+
+<!-- User NOT logged in -->
+<ng-template #guest>
+  <p>You need to be logged in.</p>
+
+  <button (click)="auth.googleLogin()">
+    <i class="fa fa-google"></i> Connect Google
+  </button>
+
+</ng-template>
