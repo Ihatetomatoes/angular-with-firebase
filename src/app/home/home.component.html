@@ -2,11 +2,11 @@
 
   {{ (player | async)?.name }}
 
-  <ul>
+  <ol>
     <li *ngFor="let player of players | async">
       {{ player.name }}
     </li>
-  </ul>
+  </ol>
 
   <form (submit)="handleSubmit($event)">
     <label for="name">Name: </label>
