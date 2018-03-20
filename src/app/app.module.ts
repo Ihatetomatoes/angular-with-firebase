@@ -14,11 +14,13 @@ import { HomeComponent } from './home/home.component';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MobxAngularModule } from 'mobx-angular';
 
 @NgModule({
 	declarations: [ AppComponent, UserProfileComponent, LoginComponent, HomeComponent, NavbarComponent ],
 	imports: [
 		BrowserModule,
+		MobxAngularModule,
 		AngularFireModule.initializeApp(environment.firebase),
 		CoreModule,
 		AppRoutingModule,
