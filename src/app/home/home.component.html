@@ -1,10 +1,10 @@
 <div *ngIf="auth.user | async; else guest">
 
-  {{ (item | async)?.name }}
+  {{ (player | async)?.name }}
 
   <ul>
-    <li *ngFor="let item of items | async">
-      {{ item.name }}
+    <li *ngFor="let player of players | async">
+      {{ player.name }}
     </li>
   </ul>
 
