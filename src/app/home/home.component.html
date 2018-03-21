@@ -10,7 +10,7 @@
 
   <form (submit)="handleSubmit($event)">
     <label for="name">Name: </label>
-    <input id="name" name="name" ng-model="name" />
+    <input id="name" name="name" [(ngModel)]="name" />
     <button type="submit">Submit</button>
   </form>
 
@@ -18,10 +18,5 @@
 
 <!-- User NOT logged in -->
 <ng-template #guest>
-  <p>You need to be logged in.</p>
-
-  <button (click)="auth.googleLogin()" class="btn-google">
-    <i class="fa fa-google"></i> Connect Google
-  </button>
-
+  <app-login></app-login>
 </ng-template>

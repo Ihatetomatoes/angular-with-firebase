@@ -1,13 +1,16 @@
-<app-navbar></app-navbar>
+<div *ngIf="!showSpinner">
+  <app-navbar></app-navbar>
 
-<!-- Main -->
-<main class="col">
-  <div class="container-fluid" style="height:1300px;">
-    <div class="row">
-      <div class="col-md-12">
-        <router-outlet></router-outlet>
+  <!-- Main -->
+  <main class="col">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
-  </div>
-</main>
-<!-- /.Main -->
+  </main>
+  <!-- /.Main -->
+</div>
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>

@@ -1,19 +1,30 @@
 .loader {
-  z-index: 3;
-  position: absolute;
-  width: 100px;
-  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   .icon {
     position: absolute;
     width: 100px;
     height: 100px;
+  }
+}
+
+.loader {
+  z-index: 3;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  .icon {
     left: 0;
     top: 0;
     background: url('../../assets/ico_loader.svg') no-repeat 0 0;
     background-size: 248px 248px;
+
     animation: spin 0.5s infinite linear;
   }
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0);
