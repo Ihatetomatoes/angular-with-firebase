@@ -1,7 +1,9 @@
 <div class="container h-100">
   <div class="row h-100 justify-content-center align-items-center text-center">
-    <div class="col-4">
-      <div *ngIf="auth.user | async; then authenticated else guest"></div>
+    <div class="col-5">
+      <div class="jumbotron">
+        <div *ngIf="auth.user | async; then authenticated else guest"></div>
+      </div>
     </div>
   </div>
 </div>
