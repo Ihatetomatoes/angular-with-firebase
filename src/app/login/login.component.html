@@ -1,7 +1,10 @@
-<div *ngIf="auth.user | async; then authenticated else guest">
-  <!-- template will replace this div -->
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center text-center">
+    <div class="col-4">
+      <div *ngIf="auth.user | async; then authenticated else guest"></div>
+    </div>
+  </div>
 </div>
-
 
 <!-- User NOT logged in -->
 <ng-template #guest>
@@ -10,6 +13,10 @@
 
   <button (click)="auth.googleLogin()" class="btn-google">
     <i class="fa fa-google"></i> Connect Google
+  </button>
+
+  <button (click)="auth.facebookLogin()" class="btn-facebook">
+    <i class="fa fa-facebook"></i> Facebook Login
   </button>
 
 </ng-template>

@@ -24,3 +24,27 @@
     transform-origin: center center;
   }
 }
+
+.btn-google {
+  text-indent: -9999px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 305px;
+  height: 53px;
+  background: url('../../assets/btn_google.png') no-repeat top left;
+  background-size: 305px 53px;
+  border: none;
+  margin-bottom: 8px;
+}
+
+.btn-facebook {
+  text-indent: -9999px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 305px;
+  height: 53px;
+  background: url('../../assets/btn_facebook.png') no-repeat top left;
+  background-size: 305px 53px;
+  border: none;
+  margin-bottom: 8px;
+}

@@ -5,31 +5,3 @@ body {
 .fixed-sn main {
   padding-top: 5.5rem;
 }
-
-.btn-google {
-  text-indent: -9999px;
-  cursor: pointer;
-  overflow: hidden;
-  width: 191px;
-  height: 46px;
-  background: url('./assets/btn_google_signin_light_normal_web@2x.png')
-    no-repeat top left;
-  background-size: 191px 46px;
-  border: none;
-  &:focus {
-    background: url('./assets/btn_google_signin_light_focus_web@2x.png')
-      no-repeat top left;
-    background-size: 191px 46px;
-  }
-  &:active {
-    background: url('./assets/btn_google_signin_light_pressed_web@2x.png')
-      no-repeat top left;
-    background-size: 191px 46px;
-  }
-  &:disabled {
-    cursor: default;
-    background: url('./assets/btn_google_signin_light_disabled_web@2x.png')
-      no-repeat top left;
-    background-size: 191px 46px;
-  }
-}
