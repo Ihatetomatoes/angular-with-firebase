@@ -1,45 +1,16 @@
-<div class="wrapper">
+<div class="wrapper" *ngIf="!showSpinner">
 
   <nav id="sidebar" class="bg-dark">
-    <!-- Sidebar Header -->
-    <div class="sidebar-header">
-      <h3>Collapsible Sidebar</h3>
-    </div>
-
-    <!-- Sidebar Links -->
-    <ul class="list-unstyled components">
-      <li class="active">
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-
-      <li>
-        <!-- Link with dropdown items -->
-        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-        <ul class="collapse list-unstyled" id="homeSubmenu">
-          <li>
-            <a href="#">Page</a>
-          </li>
-          <li>
-            <a href="#">Page</a>
-          </li>
-          <li>
-            <a href="#">Page</a>
-          </li>
-        </ul>
-
+      <ul class="sidenav">
         <li>
-          <a href="#">Portfolio</a>
+          <a [routerLink]="['/players']" class=" waves-light" mdbRippleRadius>
+            Players
+          </a>
         </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-    </ul>
+      </ul>
   </nav>
 
-  <div id="content" *ngIf="!showSpinner">
+  <div id="content">
     <app-navbar></app-navbar>
 
     <!-- Main -->
@@ -54,6 +25,6 @@
     </main>
     <!-- /.Main -->
   </div>
-  <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
 
 </div>
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
